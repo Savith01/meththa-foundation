@@ -1,5 +1,3 @@
-import React from 'react';
-import { CardChecklist } from 'lucide-react'; // Wait, Lucide React does not have CardChecklist. Let's use simple icons.
 import { ClipboardList, Paintbrush, Cog, Footprints, Smile } from 'lucide-react';
 
 export default function YourJourney() {

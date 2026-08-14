@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Microscope, Beaker, BrainCircuit, GraduationCap } from 'lucide-react';
 
 export default function ResearchDev() {

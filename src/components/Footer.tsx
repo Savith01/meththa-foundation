@@ -1,4 +1,3 @@
-import React from 'react';
 import { Mail, Phone, MapPin, Heart } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 

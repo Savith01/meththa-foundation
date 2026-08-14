@@ -1,5 +1,4 @@
-import React from 'react';
-import { PenTool, Activity, ShieldAlert, Accessibility, Eye } from 'lucide-react';
+
 
 export default function Products() {
   const items = [

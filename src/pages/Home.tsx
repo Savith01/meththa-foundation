@@ -1,5 +1,4 @@
-import React from 'react';
-import { Heart, Activity, ShieldCircle, Users, CheckSquare, Footprints, ShieldCheck } from 'lucide-react';
+import { Heart, Users, Footprints, ShieldCheck } from 'lucide-react';
 
 export default function Home() {
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Heart, Landmark, Gift, Award } from 'lucide-react';
 
 export default function FundUs() {

@@ -1,5 +1,4 @@
-import React from 'react';
-import { ShieldCheck, HeartLink, Users, Calendar } from 'lucide-react';
+import { ShieldCheck, Users, Calendar } from 'lucide-react';
 
 export default function AboutUs() {
   return (

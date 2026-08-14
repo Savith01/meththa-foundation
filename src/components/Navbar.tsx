@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X, Heart } from 'lucide-react';
 
@@ -21,7 +21,7 @@ export default function Navbar() {
       zIndex: 1000,
       backgroundColor: 'var(--nav-bg)',
       backdropFilter: 'blur(12px)',
-      -webkit-backdropFilter: 'blur(12px)',
+      WebkitBackdropFilter: 'blur(12px)',
       borderBottom: '1px solid var(--border-light)',
       height: 'var(--header-height)',
       display: 'flex',
