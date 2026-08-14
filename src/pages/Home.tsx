@@ -1,79 +1,219 @@
-import { Heart, Users, Footprints, ShieldCheck } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Heart, Users, Footprints, ShieldCheck, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      url: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1600&q=80",
+      alt: "Rehabilitation clinic and physical therapy support"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1508847154043-be12a267ef68?auto=format&fit=crop&w=1600&q=80",
+      alt: "Providing wheels and orthotic materials"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80",
+      alt: "Charity support and community health camps"
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [slides.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
   return (
     <div className="home-page">
-      {/* Hero Section */}
-      <section className="section hero-bg" style={{ padding: 'var(--space-xl) 0' }}>
-        <div className="container">
-          <div className="grid-2">
-            <div>
-              <span className="badge badge-amber" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                <Heart size={14} style={{ fill: 'var(--accent)', color: 'var(--accent)' }} /> Restoring Mobility & Dignity
-              </span>
-              <h1 style={{ marginTop: 'var(--space-sm)', lineHeight: '1.15', color: 'var(--primary-dark)' }}>
-                The Meththa Foundation
-              </h1>
-              <p style={{ fontSize: '1.25rem', color: 'var(--primary-light)', fontWeight: 600, marginTop: '8px' }}>
-                Meththa Foundation-UK & Meththa Rehabilitation Foundation Guarantee Ltd -SL
-              </p>
-              <p style={{ marginTop: 'var(--space-md)', fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: '1.7' }}>
-                We are dedicated to helping people with disabilities achieve the best possible quality of life. Through localized clinics in Sri Lanka, we provide custom artificial limbs, wheelchairs, and physical rehabilitation completely free of charge.
-              </p>
-              <div className="btn-group">
-                <a href="#/fund-us" className="btn btn-primary">Sponsor a Limb</a>
-                <a href="#/your-journey" className="btn btn-secondary">Get Support</a>
-              </div>
-            </div>
+      {/* 100vh Slider Hero */}
+      <section style={{
+        position: 'relative',
+        height: 'calc(100vh - 80px)',
+        width: '100%',
+        backgroundColor: '#000000',
+        overflow: 'hidden'
+      }}>
+        {/* Slides */}
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              backgroundImage: `url(${slide.url})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              opacity: currentSlide === index ? 1 : 0,
+              transition: 'opacity 1s ease-in-out',
+              zIndex: 1
+            }}
+            aria-label={slide.alt}
+          />
+        ))}
 
-            <div style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
-              {/* Modern Graphic representation instead of local file to ensure reliable load */}
-              <div style={{
-                position: 'relative',
-                width: '100%',
-                maxWidth: '450px',
-                height: '380px',
-                background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%)',
-                borderRadius: 'var(--radius-lg)',
-                boxShadow: 'var(--shadow-lg)',
-                overflow: 'hidden',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#ffffff',
-                padding: 'var(--space-lg)',
-                textAlign: 'center'
-              }}>
-                {/* Background decorative rings */}
-                <div style={{
-                  position: 'absolute',
-                  width: '300px',
-                  height: '300px',
-                  border: '2px solid rgba(255,255,255,0.05)',
-                  borderRadius: '50%',
-                  top: '-50px',
-                  right: '-50px'
-                }}></div>
-                <div style={{
-                  position: 'absolute',
-                  width: '200px',
-                  height: '200px',
-                  border: '2px solid rgba(255,255,255,0.05)',
-                  borderRadius: '50%',
-                  bottom: '-50px',
-                  left: '-50px'
-                }}></div>
+        {/* Dark overlay */}
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'rgba(0, 0, 0, 0.55)',
+          zIndex: 2
+        }} />
 
-                <div style={{ zIndex: 5 }}>
-                  <Footprints size={80} style={{ margin: '0 auto var(--space-sm) auto', opacity: 0.9 }} />
-                  <h3 style={{ color: '#ffffff', fontSize: '1.8rem', fontWeight: 700 }}>5,000+ Limbs Gifted</h3>
-                  <p style={{ color: 'rgba(255,255,255,0.85)', marginTop: '8px', fontSize: '0.95rem' }}>
-                    Providing amputees with the freedom to walk, work, and thrive.
-                  </p>
-                </div>
-              </div>
-            </div>
+        {/* Centered Text Overlay */}
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          textAlign: 'center',
+          color: '#ffffff',
+          padding: '0 var(--space-md)',
+          zIndex: 3
+        }}>
+          <span className="badge badge-amber" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', marginBottom: 'var(--space-md)' }}>
+            <Heart size={14} style={{ fill: 'var(--accent)', color: 'var(--accent)' }} /> Restoring Mobility & Dignity
+          </span>
+          <h1 style={{ 
+            color: '#ffffff', 
+            fontSize: 'max(2.2rem, 3.8vw)', 
+            fontWeight: 800, 
+            lineHeight: '1.25',
+            textShadow: '0 4px 10px rgba(0,0,0,0.5)',
+            maxWidth: '1000px',
+            margin: '0 auto'
+          }}>
+            The Meththa Foundation-UK
+          </h1>
+          <h2 style={{ 
+            color: '#e2e8f0', 
+            fontSize: 'max(1.4rem, 2vw)', 
+            fontWeight: 600, 
+            marginTop: '16px',
+            lineHeight: '1.35',
+            textShadow: '0 4px 10px rgba(0,0,0,0.5)',
+            maxWidth: '950px',
+            margin: '16px auto 0 auto'
+          }}>
+            The Meththa Rehabilitation Foundation Guarantee Ltd -SL
+          </h2>
+          <p style={{
+            color: 'rgba(255, 255, 255, 0.85)',
+            maxWidth: '650px',
+            marginTop: '24px',
+            fontSize: '1.1rem',
+            lineHeight: '1.6',
+            textShadow: '0 2px 4px rgba(0,0,0,0.5)'
+          }}>
+            We are here to help you achieve the best possible Quality of Life
+          </p>
+
+          <div className="btn-group" style={{ marginTop: '32px', justifyContent: 'center' }}>
+            <a href="#/fund-us" className="btn btn-primary" style={{ padding: '14px 32px' }}>Sponsor a Limb</a>
+            <a href="#/your-journey" className="btn btn-white" style={{ padding: '14px 32px' }}>Get Support</a>
           </div>
+        </div>
+
+        {/* Carousel controls */}
+        <button
+          type="button"
+          onClick={prevSlide}
+          style={{
+            position: 'absolute',
+            left: '20px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            background: 'rgba(255, 255, 255, 0.1)',
+            backdropFilter: 'blur(4px)',
+            border: 'none',
+            borderRadius: '50%',
+            width: '50px',
+            height: '50px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: '#ffffff',
+            cursor: 'pointer',
+            zIndex: 4,
+            transition: 'background var(--transition-fast)'
+          }}
+        >
+          <ChevronLeft size={28} />
+        </button>
+
+        <button
+          type="button"
+          onClick={nextSlide}
+          style={{
+            position: 'absolute',
+            right: '20px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            background: 'rgba(255, 255, 255, 0.1)',
+            backdropFilter: 'blur(4px)',
+            border: 'none',
+            borderRadius: '50%',
+            width: '50px',
+            height: '50px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: '#ffffff',
+            cursor: 'pointer',
+            zIndex: 4,
+            transition: 'background var(--transition-fast)'
+          }}
+        >
+          <ChevronRight size={28} />
+        </button>
+
+        {/* Pagination Dots */}
+        <div style={{
+          position: 'absolute',
+          bottom: '24px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          display: 'flex',
+          gap: '12px',
+          zIndex: 4
+        }}>
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              type="button"
+              onClick={() => setCurrentSlide(index)}
+              style={{
+                width: '12px',
+                height: '12px',
+                borderRadius: '50%',
+                backgroundColor: currentSlide === index ? 'var(--primary-light)' : 'rgba(255, 255, 255, 0.4)',
+                border: 'none',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease'
+              }}
+            />
+          ))}
         </div>
       </section>
 

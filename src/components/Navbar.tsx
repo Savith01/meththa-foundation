@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Menu, X, Heart } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import logoImg from '../assets/logo.svg';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,35 +36,8 @@ export default function Navbar() {
         width: '100%'
       }}>
         {/* Brand/Logo */}
-        <NavLink to="/" style={{ display: 'flex', alignItems: 'center', gap: '8px', zIndex: 1010 }}>
-          <div style={{
-            width: '40px',
-            height: '40px',
-            borderRadius: '50%',
-            backgroundColor: 'var(--primary)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#ffffff'
-          }}>
-            <Heart size={20} style={{ fill: '#ffffff' }} />
-          </div>
-          <div>
-            <span style={{
-              fontFamily: 'var(--font-title)',
-              fontWeight: 800,
-              fontSize: '1.25rem',
-              letterSpacing: '-0.5px',
-              color: 'var(--primary-dark)'
-            }}>METHTHA</span>
-            <span style={{
-              fontSize: '0.75rem',
-              display: 'block',
-              marginTop: '-5px',
-              color: 'var(--text-secondary)',
-              letterSpacing: '1px'
-            }}>FOUNDATION</span>
-          </div>
+        <NavLink to="/" style={{ display: 'flex', alignItems: 'center', zIndex: 1010 }}>
+          <img src={logoImg} alt="Meththa Foundation" style={{ height: '48px', objectFit: 'contain' }} />
         </NavLink>
 
         {/* Desktop Menu */}

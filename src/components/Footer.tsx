@@ -1,5 +1,6 @@
-import { Mail, Phone, MapPin, Heart } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
+import logoImg from '../assets/logo.svg';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -18,27 +19,15 @@ export default function Footer() {
           {/* Column 1: Info */}
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: 'var(--space-sm)' }}>
-              <div style={{
-                width: '32px',
-                height: '32px',
-                borderRadius: '50%',
-                backgroundColor: 'var(--primary)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#ffffff'
-              }}>
-                <Heart size={16} style={{ fill: '#ffffff' }} />
-              </div>
-              <span style={{
-                fontFamily: 'var(--font-title)',
-                fontWeight: 700,
-                fontSize: '1.2rem',
-                color: '#ffffff',
-                letterSpacing: '-0.5px'
-              }}>
-                METHTHA FOUNDATION
-              </span>
+              <img 
+                src={logoImg} 
+                alt="Meththa Foundation Logo" 
+                style={{ 
+                  height: '44px', 
+                  objectFit: 'contain',
+                  filter: 'brightness(0) invert(1)' 
+                }} 
+              />
             </div>
             <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: '1.6', marginBottom: 'var(--space-sm)' }}>
               Providing prosthetic limbs, custom orthoses, and rehabilitation to thousands of disabled individuals across Sri Lanka, restoring their independence and quality of life.
