@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Users, Footprints, ShieldCheck, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Users, Heart, Smile, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -236,55 +236,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Core Services Section */}
+      {/* Core Purpose Section */}
       <section className="section" style={{ backgroundColor: 'var(--bg-card)' }}>
         <div className="container">
           <div className="text-center" style={{ marginBottom: 'var(--space-xl)' }}>
             <span className="badge">What We Do</span>
-            <h2 className="section-title center" style={{ marginTop: 'var(--space-xs)' }}>Our Medical Relief Services</h2>
+            <h2 className="section-title center" style={{ marginTop: 'var(--space-xs)' }}>Our Mission & Purpose</h2>
             <p style={{ maxWidth: '600px', margin: 'var(--space-sm) auto 0 auto' }}>
-              We build locally adapted solutions to ensure long-term usability and accessibility in dry, humid, and rural regions.
+              We are dedicated to supporting your journey towards complete physical, social, and emotional well-being.
             </p>
           </div>
 
           <div className="grid-3">
-            <div className="card text-center" style={{ padding: 'var(--space-lg)' }}>
-              <div className="card-icon" style={{ margin: '0 auto var(--space-sm) auto' }}>
-                <Footprints size={28} />
+            <div className="card text-center" style={{ padding: 'var(--space-lg)', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
+              <div className="card-icon" style={{ margin: '0 auto var(--space-sm) auto', color: 'var(--primary)', backgroundColor: 'var(--primary-subtle)' }}>
+                <Heart size={28} />
               </div>
-              <h3 style={{ marginBottom: 'var(--space-xs)' }}>Prosthetics Manufacture</h3>
-              <p style={{ fontSize: '0.95rem' }}>
-                Custom fabrication of below-knee and above-knee legs using robust, heat-stable plastics suited for agricultural workers walking in muddy fields.
+              <h3 style={{ marginBottom: 'var(--space-xs)' }}>Quality of Life</h3>
+              <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--text-secondary)', margin: 0 }}>
+                We are here to help you achieve the best possible Quality of Life for yourself.
               </p>
-              <a href="#/products" style={{ display: 'inline-block', marginTop: 'var(--space-sm)', color: 'var(--primary)', fontWeight: 'bold', fontSize: '0.9rem' }}>
-                Explore Products →
-              </a>
             </div>
 
-            <div className="card text-center" style={{ padding: 'var(--space-lg)' }}>
+            <div className="card text-center" style={{ padding: 'var(--space-lg)', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
               <div className="card-icon" style={{ margin: '0 auto var(--space-sm) auto', color: 'var(--secondary)', backgroundColor: 'rgba(14, 165, 233, 0.08)' }}>
                 <Users size={28} />
               </div>
-              <h3 style={{ marginBottom: 'var(--space-xs)' }}>Orthotics & Braces</h3>
-              <p style={{ fontSize: '0.95rem' }}>
-                Providing supportive splints, braces, and custom orthotic devices (such as AFOs) to help children and adults recovering from paralysis, polio, or physical traumas.
+              <h3 style={{ marginBottom: 'var(--space-xs)' }}>Social Wellbeing</h3>
+              <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--text-secondary)', margin: 0 }}>
+                Our desire is for you to be happy among family and friends with full social participation.
               </p>
-              <a href="#/products" style={{ display: 'inline-block', marginTop: 'var(--space-sm)', color: 'var(--secondary-dark)', fontWeight: 'bold', fontSize: '0.9rem' }}>
-                View Supports →
-              </a>
             </div>
 
-            <div className="card text-center" style={{ padding: 'var(--space-lg)' }}>
+            <div className="card text-center" style={{ padding: 'var(--space-lg)', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
               <div className="card-icon" style={{ margin: '0 auto var(--space-sm) auto', color: 'var(--accent)', backgroundColor: 'rgba(217, 119, 6, 0.08)' }}>
-                <ShieldCheck size={28} />
+                <Smile size={28} />
               </div>
-              <h3 style={{ marginBottom: 'var(--space-xs)' }}>Clinical Rehabilitation</h3>
-              <p style={{ fontSize: '0.95rem' }}>
-                Specialized gait assessment walkways, strength coaching, and post-fitting alignments from certified local physical therapists to ensure patient success.
+              <h3 style={{ marginBottom: 'var(--space-xs)' }}>Confidence & Peace</h3>
+              <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--text-secondary)', margin: 0 }}>
+                Every person deserves to enjoy life free of anxiety and worry, being happy and confident about their place among family and friends.
               </p>
-              <a href="#/your-journey" style={{ display: 'inline-block', marginTop: 'var(--space-sm)', color: 'var(--accent)', fontWeight: 'bold', fontSize: '0.9rem' }}>
-                See Rehabilitation Path →
-              </a>
             </div>
           </div>
         </div>
