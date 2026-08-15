@@ -1,6 +1,6 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
-import logoImg from '../assets/logo.svg';
+import logoImg from '../assets/logo.png';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -19,14 +19,14 @@ export default function Footer() {
           {/* Column 1: Info */}
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: 'var(--space-sm)' }}>
-              <img 
-                src={logoImg} 
-                alt="Meththa Foundation Logo" 
-                style={{ 
-                  height: '44px', 
+              <img
+                src={logoImg}
+                alt="Meththa Foundation Logo"
+                style={{
+                  height: '44px',
                   objectFit: 'contain',
-                  filter: 'brightness(0) invert(1)' 
-                }} 
+                  filter: 'brightness(0) invert(1)'
+                }}
               />
             </div>
             <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: '1.6', marginBottom: 'var(--space-sm)' }}>

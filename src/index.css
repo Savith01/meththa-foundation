@@ -359,3 +359,9 @@ img {
   background-color: var(--neutral-200);
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .carousel-arrow {
+    display: none !important;
+  }
+}

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Heart, Users, Footprints, ShieldCheck, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Users, Footprints, ShieldCheck, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -92,9 +92,6 @@ export default function Home() {
           padding: '0 var(--space-md)',
           zIndex: 3
         }}>
-          <span className="badge badge-amber" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', marginBottom: 'var(--space-md)' }}>
-            <Heart size={14} style={{ fill: 'var(--accent)', color: 'var(--accent)' }} /> Restoring Mobility & Dignity
-          </span>
           <h1 style={{ 
             color: '#ffffff', 
             fontSize: 'max(2.2rem, 3.8vw)', 
@@ -139,6 +136,7 @@ export default function Home() {
         <button
           type="button"
           onClick={prevSlide}
+          className="carousel-arrow"
           style={{
             position: 'absolute',
             left: '20px',
@@ -165,6 +163,7 @@ export default function Home() {
         <button
           type="button"
           onClick={nextSlide}
+          className="carousel-arrow"
           style={{
             position: 'absolute',
             right: '20px',
