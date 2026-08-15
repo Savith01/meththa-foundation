@@ -1,5 +1,4 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
-import { NavLink } from 'react-router-dom';
 import logoImg from '../assets/logo.png';
 
 export default function Footer() {
@@ -38,38 +37,57 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Navigation Links */}
+          {/* Column 2: Contact Details */}
           <div>
-            <h3 style={{ color: '#ffffff', marginBottom: 'var(--space-sm)', fontSize: '1.1rem', fontWeight: 600 }}>Quick Links</h3>
-            <ul style={{ listStyleType: 'none', paddingLeft: 0, display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              <li><NavLink to="/" style={{ color: 'rgba(255,255,255,0.7)', transition: 'color var(--transition-fast)' }} hover-color="#ffffff">Home</NavLink></li>
-              <li><NavLink to="/about-us" style={{ color: 'rgba(255,255,255,0.7)' }}>About Us</NavLink></li>
-              <li><NavLink to="/your-journey" style={{ color: 'rgba(255,255,255,0.7)' }}>Your Journey</NavLink></li>
-              <li><NavLink to="/products" style={{ color: 'rgba(255,255,255,0.7)' }}>Products & Devices</NavLink></li>
-              <li><NavLink to="/research" style={{ color: 'rgba(255,255,255,0.7)' }}>Research & Development</NavLink></li>
-              <li><NavLink to="/fund-us" style={{ color: 'rgba(255,255,255,0.7)' }}>Fund Us (Donate)</NavLink></li>
-            </ul>
-          </div>
-
-          {/* Column 3: Contact */}
-          <div>
-            <h3 style={{ color: '#ffffff', marginBottom: 'var(--space-sm)', fontSize: '1.1rem', fontWeight: 600 }}>Contact Clinics</h3>
+            <h3 style={{ color: '#ffffff', marginBottom: 'var(--space-sm)', fontSize: '1.1rem', fontWeight: 600 }}>Contact Details</h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
                 <MapPin size={18} style={{ color: 'var(--primary-light)', flexShrink: 0, marginTop: '2px' }} />
                 <span>
-                  <strong>Sri Lanka Clinic:</strong><br />
-                  Meththa Rehab Center, Kadawedduwa, Yatiyana, Minipura, Sri Lanka
+                  <strong>Headquarters & Clinic:</strong><br />
+                  Meththa Rehabilitation Foundation Guarantee Ltd,<br />
+                  Moragollagama Road, Mahawa, Sri Lanka
                 </span>
               </div>
+              <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
+                <Phone size={18} style={{ color: 'var(--primary-light)', flexShrink: 0, marginTop: '2px' }} />
+                <div>
+                  <span style={{ display: 'block' }}>+94 37 227 5001 (Mobile)</span>
+                  <span style={{ display: 'block' }}>+94 37 227 5002 (Mobile)</span>
+                </div>
+              </div>
               <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-                <Phone size={18} style={{ color: 'var(--primary-light)', flexShrink: 0 }} />
-                <span>+94 41 224 8133</span>
+                <Phone size={18} style={{ color: '#25D366', flexShrink: 0 }} />
+                <span>+94 77 123 4567 (WhatsApp)</span>
               </div>
               <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
                 <Mail size={18} style={{ color: 'var(--primary-light)', flexShrink: 0 }} />
-                <span>info@meththafoundation.org.uk</span>
+                <span>contact@meththafoundationsl.org</span>
               </div>
+            </div>
+          </div>
+
+          {/* Column 3: Location Map */}
+          <div>
+            <h3 style={{ color: '#ffffff', marginBottom: 'var(--space-sm)', fontSize: '1.1rem', fontWeight: 600 }}>Our Location</h3>
+            <div style={{ 
+              borderRadius: 'var(--radius-md)', 
+              overflow: 'hidden', 
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              boxShadow: 'var(--shadow-sm)',
+              height: '160px',
+              width: '100%'
+            }}>
+              <iframe
+                src="https://maps.google.com/maps?q=Meththa%20Rehabilitation%20Foundation,%20Moragollagama%20Road,%20Mahawa,%20Sri%20Lanka&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Google Maps Location"
+              />
             </div>
           </div>
         </div>
