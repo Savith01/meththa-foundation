@@ -149,8 +149,9 @@ export default function Home() {
           <h1 style={{ 
             color: '#ffffff', 
             fontSize: 'max(2.2rem, 3.8vw)', 
-            fontWeight: 800, 
-            lineHeight: '1.25',
+            fontWeight: 700, 
+            lineHeight: '1.35',
+            letterSpacing: '0.03em',
             textShadow: '0 4px 10px rgba(0,0,0,0.5)',
             maxWidth: '1000px',
             margin: '0 auto'
@@ -160,21 +161,23 @@ export default function Home() {
           <h2 style={{ 
             color: '#e2e8f0', 
             fontSize: 'max(1.4rem, 2vw)', 
-            fontWeight: 600, 
-            marginTop: '16px',
-            lineHeight: '1.35',
+            fontWeight: 500, 
+            marginTop: '18px',
+            lineHeight: '1.45',
+            letterSpacing: '0.02em',
             textShadow: '0 4px 10px rgba(0,0,0,0.5)',
             maxWidth: '950px',
-            margin: '16px auto 0 auto'
+            margin: '18px auto 0 auto'
           }}>
             The Meththa Rehabilitation Foundation Guarantee Ltd -SL
           </h2>
           <p style={{
             color: 'rgba(255, 255, 255, 0.85)',
             maxWidth: '650px',
-            marginTop: '24px',
-            fontSize: '1.1rem',
-            lineHeight: '1.6',
+            marginTop: '28px',
+            fontSize: '1.15rem',
+            lineHeight: '1.75',
+            letterSpacing: '0.01em',
             textShadow: '0 2px 4px rgba(0,0,0,0.5)'
           }}>
             We are here to help you achieve the best possible Quality of Life
@@ -294,7 +297,7 @@ export default function Home() {
       <section className="section" style={{ backgroundColor: 'var(--bg-card)' }}>
         <div className="container">
           <div className="text-center" style={{ marginBottom: 'var(--space-xl)' }}>
-            {/* <span className="badge">What We Do</span> */}
+            <span className="badge">What We Do</span>
             <h2 className="section-title center" style={{ marginTop: 'var(--space-xs)' }}>Our Mission & Purpose</h2>
             <p style={{ maxWidth: '600px', margin: 'var(--space-sm) auto 0 auto' }}>
               We are dedicated to supporting your journey towards complete physical, social, and emotional well-being.
@@ -341,7 +344,7 @@ export default function Home() {
           <div className="grid-2" style={{ alignItems: 'start', gap: 'var(--space-xl)' }}>
             {/* Left Column: Our Services */}
             <div>
-              {/* <span className="badge">Expertise</span> */}
+              <span className="badge">Expertise</span>
               <h2 className="section-title" style={{ marginTop: 'var(--space-xs)', marginBottom: 'var(--space-md)' }}>Our Services</h2>
               <p style={{ fontSize: '1.05rem', lineHeight: '1.7', marginBottom: 'var(--space-lg)' }}>
                 We specialise in physical rehabilitation of chronic incurable physical disabilities. There are four main areas where we undertake service provision but we have the capacity to provide support beyond these four. Our main areas of expertise are:
@@ -400,7 +403,7 @@ export default function Home() {
 
             {/* Right Column: Organization Info and Stats */}
             <div>
-              {/* <span className="badge badge-amber">Our Reach</span> */}
+              <span className="badge badge-amber">Our Reach</span>
               <h2 className="section-title" style={{ marginTop: 'var(--space-xs)', marginBottom: 'var(--space-md)' }}>We are a World Wide Charity Organization</h2>
               <p style={{ fontSize: '1.05rem', lineHeight: '1.7', marginBottom: 'var(--space-md)' }}>
                 We strived hard during the last 25 years to establish a premier open access Physical Rehabilitation service which is modern, cost effective and affordable. Every penny or rupee donated by benevolent donors and institutions is used entirely for service provision. We avoid waste by recycling anything that is recyclable.
@@ -471,7 +474,7 @@ export default function Home() {
           
           {/* Top Part: Why We Need Support */}
           <div style={{ marginBottom: 'var(--space-xl)', textAlign: 'center' }}>
-            {/* <span className="badge badge-amber">Support Us</span> */}
+            <span className="badge badge-amber">Support Us</span>
             <h2 className="section-title center" style={{ marginTop: 'var(--space-xs)', marginBottom: 'var(--space-sm)' }}>
               Why we need the support of donors like you...
             </h2>
@@ -691,7 +694,7 @@ export default function Home() {
       <section className="section" style={{ backgroundColor: 'var(--bg-card)', padding: 'var(--space-xl) 0', borderTop: '1px solid var(--border-light)' }}>
         <div className="container">
           <div className="text-center" style={{ marginBottom: 'var(--space-lg)' }}>
-            {/* <span className="badge">Testimonials</span> */}
+            <span className="badge">Testimonials</span>
             <h2 className="section-title center" style={{ marginTop: 'var(--space-xs)' }}>
               Read the Real Stories from the People We Helped
             </h2>
