@@ -157,7 +157,7 @@ export default function Home() {
             maxWidth: '1000px',
             margin: '0 auto'
           }}>
-            The Meththa Foundation-UK
+            Meththa Foundation-UK
           </h1>
           <h2 style={{ 
             color: '#e2e8f0', 
