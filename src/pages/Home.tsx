@@ -4,6 +4,7 @@ import slider1 from '../assets/slider/slider1.JPG';
 import slider2 from '../assets/slider/slider2.JPG';
 import slider3 from '../assets/slider/slider3.jpg';
 import slider4 from '../assets/slider/slider4.jpg';
+import ScrollReveal from '../components/ScrollReveal';
 
 const stories = [
   {
@@ -276,64 +277,74 @@ export default function Home() {
       {/* Impact Statistics */}
       <section style={{ backgroundColor: 'var(--primary-dark)', color: '#ffffff', padding: 'var(--space-md) 0' }}>
         <div className="container">
-          <div className="grid-3 text-center" style={{ gap: 'var(--space-md)' }}>
-            <div>
-              <h2 style={{ fontSize: '3rem', color: 'var(--accent-light)', marginBottom: '4px' }}>5,120+</h2>
-              <p style={{ color: '#e2e8f0', fontWeight: 600, fontSize: '1rem' }}>Prosthetic Limbs Distributed</p>
+          <ScrollReveal direction="up">
+            <div className="grid-3 text-center" style={{ gap: 'var(--space-md)' }}>
+              <div>
+                <h2 style={{ fontSize: '3rem', color: 'var(--accent-light)', marginBottom: '4px' }}>5,120+</h2>
+                <p style={{ color: '#e2e8f0', fontWeight: 600, fontSize: '1rem' }}>Prosthetic Limbs Distributed</p>
+              </div>
+              <div>
+                <h2 style={{ fontSize: '3rem', color: 'var(--accent-light)', marginBottom: '4px' }}>780+</h2>
+                <p style={{ color: '#e2e8f0', fontWeight: 600, fontSize: '1rem' }}>Wheelchairs Provided</p>
+              </div>
+              <div>
+                <h2 style={{ fontSize: '3rem', color: 'var(--accent-light)', marginBottom: '4px' }}>22+</h2>
+                <p style={{ color: '#e2e8f0', fontWeight: 600, fontSize: '1rem' }}>Years of Free Service</p>
+              </div>
             </div>
-            <div>
-              <h2 style={{ fontSize: '3rem', color: 'var(--accent-light)', marginBottom: '4px' }}>780+</h2>
-              <p style={{ color: '#e2e8f0', fontWeight: 600, fontSize: '1rem' }}>Wheelchairs Provided</p>
-            </div>
-            <div>
-              <h2 style={{ fontSize: '3rem', color: 'var(--accent-light)', marginBottom: '4px' }}>22+</h2>
-              <p style={{ color: '#e2e8f0', fontWeight: 600, fontSize: '1rem' }}>Years of Free Service</p>
-            </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Core Purpose Section */}
       <section className="section" style={{ backgroundColor: 'var(--bg-card)' }}>
         <div className="container">
-          <div className="text-center" style={{ marginBottom: 'var(--space-xl)' }}>
-            <span className="badge">What We Do</span>
-            <h2 className="section-title center" style={{ marginTop: 'var(--space-xs)' }}>Our Mission & Purpose</h2>
-            <p style={{ maxWidth: '600px', margin: 'var(--space-sm) auto 0 auto' }}>
-              We are dedicated to supporting your journey towards complete physical, social, and emotional well-being.
-            </p>
-          </div>
+          <ScrollReveal direction="up">
+            <div className="text-center" style={{ marginBottom: 'var(--space-xl)' }}>
+              <span className="badge">What We Do</span>
+              <h2 className="section-title center" style={{ marginTop: 'var(--space-xs)' }}>Our Mission & Purpose</h2>
+              <p style={{ maxWidth: '600px', margin: 'var(--space-sm) auto 0 auto' }}>
+                We are dedicated to supporting your journey towards complete physical, social, and emotional well-being.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid-3">
-            <div className="card text-center" style={{ padding: 'var(--space-lg)', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
-              <div className="card-icon" style={{ margin: '0 auto var(--space-sm) auto', color: 'var(--primary)', backgroundColor: 'var(--primary-subtle)' }}>
-                <Heart size={28} />
+            <ScrollReveal direction="up" delay={100}>
+              <div className="card text-center" style={{ padding: 'var(--space-lg)', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
+                <div className="card-icon" style={{ margin: '0 auto var(--space-sm) auto', color: 'var(--primary)', backgroundColor: 'var(--primary-subtle)' }}>
+                  <Heart size={28} />
+                </div>
+                <h3 style={{ marginBottom: 'var(--space-xs)' }}>Quality of Life</h3>
+                <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--text-secondary)', margin: 0 }}>
+                  We are here to help you achieve the best possible Quality of Life for yourself.
+                </p>
               </div>
-              <h3 style={{ marginBottom: 'var(--space-xs)' }}>Quality of Life</h3>
-              <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--text-secondary)', margin: 0 }}>
-                We are here to help you achieve the best possible Quality of Life for yourself.
-              </p>
-            </div>
+            </ScrollReveal>
 
-            <div className="card text-center" style={{ padding: 'var(--space-lg)', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
-              <div className="card-icon" style={{ margin: '0 auto var(--space-sm) auto', color: 'var(--secondary)', backgroundColor: 'rgba(14, 165, 233, 0.08)' }}>
-                <Users size={28} />
+            <ScrollReveal direction="up" delay={200}>
+              <div className="card text-center" style={{ padding: 'var(--space-lg)', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
+                <div className="card-icon" style={{ margin: '0 auto var(--space-sm) auto', color: 'var(--secondary)', backgroundColor: 'rgba(14, 165, 233, 0.08)' }}>
+                  <Users size={28} />
+                </div>
+                <h3 style={{ marginBottom: 'var(--space-xs)' }}>Social Wellbeing</h3>
+                <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--text-secondary)', margin: 0 }}>
+                  Our desire is for you to be happy among family and friends with full social participation.
+                </p>
               </div>
-              <h3 style={{ marginBottom: 'var(--space-xs)' }}>Social Wellbeing</h3>
-              <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--text-secondary)', margin: 0 }}>
-                Our desire is for you to be happy among family and friends with full social participation.
-              </p>
-            </div>
+            </ScrollReveal>
 
-            <div className="card text-center" style={{ padding: 'var(--space-lg)', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
-              <div className="card-icon" style={{ margin: '0 auto var(--space-sm) auto', color: 'var(--accent)', backgroundColor: 'rgba(217, 119, 6, 0.08)' }}>
-                <Smile size={28} />
+            <ScrollReveal direction="up" delay={300}>
+              <div className="card text-center" style={{ padding: 'var(--space-lg)', display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
+                <div className="card-icon" style={{ margin: '0 auto var(--space-sm) auto', color: 'var(--accent)', backgroundColor: 'rgba(217, 119, 6, 0.08)' }}>
+                  <Smile size={28} />
+                </div>
+                <h3 style={{ marginBottom: 'var(--space-xs)' }}>Confidence & Peace</h3>
+                <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--text-secondary)', margin: 0 }}>
+                  Every person deserves to enjoy life free of anxiety and worry, being happy and confident about their place among family and friends.
+                </p>
               </div>
-              <h3 style={{ marginBottom: 'var(--space-xs)' }}>Confidence & Peace</h3>
-              <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--text-secondary)', margin: 0 }}>
-                Every person deserves to enjoy life free of anxiety and worry, being happy and confident about their place among family and friends.
-              </p>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -343,7 +354,8 @@ export default function Home() {
         <div className="container">
           <div className="grid-2" style={{ alignItems: 'start', gap: 'var(--space-xl)' }}>
             {/* Left Column: Our Services */}
-            <div>
+            <ScrollReveal direction="left">
+              <div>
               <span className="badge">Expertise</span>
               <h2 className="section-title" style={{ marginTop: 'var(--space-xs)', marginBottom: 'var(--space-md)' }}>Our Services</h2>
               <p style={{ fontSize: '1.05rem', lineHeight: '1.7', marginBottom: 'var(--space-lg)' }}>
@@ -400,9 +412,11 @@ export default function Home() {
                 All this is undertaken by a team of qualified and well trained professionals who are supported by a senior highly specialised Consultant in Rehabilitation Medicine.
               </p>
             </div>
+            </ScrollReveal>
 
             {/* Right Column: Organization Info and Stats */}
-            <div>
+            <ScrollReveal direction="right">
+              <div>
               <span className="badge badge-amber">Our Reach</span>
               <h2 className="section-title" style={{ marginTop: 'var(--space-xs)', marginBottom: 'var(--space-md)' }}>We are a World Wide Charity Organization</h2>
               <p style={{ fontSize: '1.05rem', lineHeight: '1.7', marginBottom: 'var(--space-md)' }}>
@@ -464,6 +478,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -473,59 +488,64 @@ export default function Home() {
         <div className="container">
           
           {/* Top Part: Why We Need Support */}
-          <div style={{ marginBottom: 'var(--space-xl)', textAlign: 'center' }}>
-            <span className="badge badge-amber">Support Us</span>
-            <h2 className="section-title center" style={{ marginTop: 'var(--space-xs)', marginBottom: 'var(--space-sm)' }}>
-              Why we need the support of donors like you...
-            </h2>
-            <p style={{ 
-              fontSize: '1.2rem', 
-              fontWeight: 600, 
-              color: 'var(--primary-dark)', 
-              maxWidth: '800px', 
-              margin: '0 auto var(--space-md) auto',
-              lineHeight: '1.6'
-            }}>
-              Your support is crucial because the number of people we can care for is dependent entirely on your donations.
-            </p>
-            
-            <div style={{
-              backgroundColor: 'var(--primary-subtle)',
-              borderLeft: '4px solid var(--primary)',
-              borderRadius: 'var(--radius-sm)',
-              padding: 'var(--space-md)',
-              maxWidth: '800px',
-              margin: '0 auto',
-              textAlign: 'left'
-            }}>
-              <h4 style={{ color: 'var(--primary-dark)', fontWeight: 700, marginBottom: '6px', fontSize: '1.05rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                ➔ We help nonprofits become more effective
-              </h4>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', margin: 0, lineHeight: '1.6' }}>
-                Being a non-profit organisation means we are able to re-invest all earnings in the Foundation whilst providing an affordable service. The beneficiaries are our staff and service users.
+          <ScrollReveal direction="up">
+            <div style={{ marginBottom: 'var(--space-xl)', textAlign: 'center' }}>
+              <span className="badge badge-amber">Support Us</span>
+              <h2 className="section-title center" style={{ marginTop: 'var(--space-xs)', marginBottom: 'var(--space-sm)' }}>
+                Why we need the support of donors like you...
+              </h2>
+              <p style={{ 
+                fontSize: '1.2rem', 
+                fontWeight: 600, 
+                color: 'var(--primary-dark)', 
+                maxWidth: '800px', 
+                margin: '0 auto var(--space-md) auto',
+                lineHeight: '1.6'
+              }}>
+                Your support is crucial because the number of people we can care for is dependent entirely on your donations.
               </p>
+              
+              <div style={{
+                backgroundColor: 'var(--primary-subtle)',
+                borderLeft: '4px solid var(--primary)',
+                borderRadius: 'var(--radius-sm)',
+                padding: 'var(--space-md)',
+                maxWidth: '800px',
+                margin: '0 auto',
+                textAlign: 'left'
+              }}>
+                <h4 style={{ color: 'var(--primary-dark)', fontWeight: 700, marginBottom: '6px', fontSize: '1.05rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  ➔ We help nonprofits become more effective
+                </h4>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', margin: 0, lineHeight: '1.6' }}>
+                  Being a non-profit organisation means we are able to re-invest all earnings in the Foundation whilst providing an affordable service. The beneficiaries are our staff and service users.
+                </p>
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           <div className="divider" style={{ margin: 'var(--space-xl) 0' }} />
 
           {/* Bottom Part: Select Your Donation Method */}
           <div className="grid-2" style={{ alignItems: 'center', gap: 'var(--space-xl)' }}>
             {/* Left Column: Text info */}
-            <div>
-              <h3 style={{ fontSize: '2rem', color: 'var(--primary-dark)', marginBottom: 'var(--space-sm)' }}>
-                Select your donation method
-              </h3>
-              <h4 style={{ fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 600, lineHeight: '1.5', marginBottom: 'var(--space-sm)' }}>
-                A regular basic monthly donation or one-off premium donation, whichever is most convenient to you
-              </h4>
-              <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', lineHeight: '1.7', margin: 0 }}>
-                A small monthly donation by bank standing order is the most convenient way for most people to donate. Five British Pounds or five hundred rupees a month can go a long way if all of you consider this charitable option. All donations are accounted for transparently.
-              </p>
-            </div>
+            <ScrollReveal direction="left">
+              <div>
+                <h3 style={{ fontSize: '2rem', color: 'var(--primary-dark)', marginBottom: 'var(--space-sm)' }}>
+                  Select your donation method
+                </h3>
+                <h4 style={{ fontSize: '1.15rem', color: 'var(--text-primary)', fontWeight: 600, lineHeight: '1.5', marginBottom: 'var(--space-sm)' }}>
+                  A regular basic monthly donation or one-off premium donation, whichever is most convenient to you
+                </h4>
+                <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', lineHeight: '1.7', margin: 0 }}>
+                  A small monthly donation by bank standing order is the most convenient way for most people to donate. Five British Pounds or five hundred rupees a month can go a long way if all of you consider this charitable option. All donations are accounted for transparently.
+                </p>
+              </div>
+            </ScrollReveal>
 
             {/* Right Column: Donation Cards */}
-            <div className="donation-cards-grid">
+            <ScrollReveal direction="right">
+              <div className="donation-cards-grid">
               
               {/* Card 1: Regular Basic */}
               <div className="card" style={{ 
@@ -591,6 +611,7 @@ export default function Home() {
               </div>
 
             </div>
+            </ScrollReveal>
           </div>
 
           <div className="divider" style={{ margin: 'var(--space-xl) 0' }} />
@@ -599,7 +620,8 @@ export default function Home() {
           <div className="grid-2" style={{ alignItems: 'start', gap: 'var(--space-xl)' }}>
             
             {/* Left Column: Bank Account Details */}
-            <div>
+            <ScrollReveal direction="left">
+              <div>
               <h3 style={{ fontSize: '2rem', color: 'var(--primary-dark)', marginBottom: 'var(--space-md)' }}>
                 Bank Account Details
               </h3>
@@ -641,9 +663,11 @@ export default function Home() {
 
               </div>
             </div>
+            </ScrollReveal>
 
             {/* Right Column: Donate via JustGiving */}
-            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%', backgroundColor: 'var(--bg-card)', padding: 'var(--space-lg)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-light)', boxShadow: 'var(--shadow-sm)' }}>
+            <ScrollReveal direction="right">
+              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%', backgroundColor: 'var(--bg-card)', padding: 'var(--space-lg)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-light)', boxShadow: 'var(--shadow-sm)' }}>
               <h3 style={{ fontSize: '2rem', color: 'var(--accent)', marginBottom: 'var(--space-sm)' }}>
                 Donate via JustGiving
               </h3>
@@ -684,6 +708,7 @@ export default function Home() {
                 Thank you for your donation
               </h4>
             </div>
+            </ScrollReveal>
 
           </div>
 
@@ -693,18 +718,21 @@ export default function Home() {
       {/* Real Stories Section */}
       <section className="section" style={{ backgroundColor: 'var(--bg-card)', padding: 'var(--space-xl) 0', borderTop: '1px solid var(--border-light)' }}>
         <div className="container">
-          <div className="text-center" style={{ marginBottom: 'var(--space-lg)' }}>
-            <span className="badge">Testimonials</span>
-            <h2 className="section-title center" style={{ marginTop: 'var(--space-xs)' }}>
-              Read the Real Stories from the People We Helped
-            </h2>
-            <p style={{ maxWidth: '600px', margin: 'var(--space-sm) auto 0 auto', color: 'var(--text-secondary)' }}>
-              Hover to pause and click on any person to read their journey of recovery and independence.
-            </p>
-          </div>
+          <ScrollReveal direction="up">
+            <div className="text-center" style={{ marginBottom: 'var(--space-lg)' }}>
+              <span className="badge">Testimonials</span>
+              <h2 className="section-title center" style={{ marginTop: 'var(--space-xs)' }}>
+                Read the Real Stories from the People We Helped
+              </h2>
+              <p style={{ maxWidth: '600px', margin: 'var(--space-sm) auto 0 auto', color: 'var(--text-secondary)' }}>
+                Hover to pause and click on any person to read their journey of recovery and independence.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
 
-        <div className="marquee-container">
+        <ScrollReveal direction="up" delay={100}>
+          <div className="marquee-container">
           <div className="marquee-track">
             {stories.map((story) => (
               <div 
@@ -818,6 +846,7 @@ export default function Home() {
             ))}
           </div>
         </div>
+        </ScrollReveal>
 
         {/* Modal Popup for Individual Stories */}
         {selectedStory && (
@@ -903,11 +932,13 @@ export default function Home() {
       {/* CTA Box */}
       <section className="section-primary text-center">
         <div className="container">
-          <h2 style={{ marginBottom: 'var(--space-xs)' }}>Help Us Rebuild Lives</h2>
-          <p style={{ maxWidth: '600px', margin: '0 auto var(--space-md) auto' }}>
-            A contribution of £100 sponsors a complete below-knee prosthesis that will allow an amputee to walk and earn a living. Join our circle of hope today.
-          </p>
-          <a href="#/fund-us" className="btn btn-primary">Sponsor an Amputee</a>
+          <ScrollReveal direction="up">
+            <h2 style={{ marginBottom: 'var(--space-xs)' }}>Help Us Rebuild Lives</h2>
+            <p style={{ maxWidth: '600px', margin: '0 auto var(--space-md) auto' }}>
+              A contribution of £100 sponsors a complete below-knee prosthesis that will allow an amputee to walk and earn a living. Join our circle of hope today.
+            </p>
+            <a href="#/fund-us" className="btn btn-primary">Sponsor an Amputee</a>
+          </ScrollReveal>
         </div>
       </section>
     </div>
