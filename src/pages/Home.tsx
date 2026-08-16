@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Users, Heart, Smile, ChevronLeft, ChevronRight } from 'lucide-react';
+import slider1 from '../assets/slider/slider1.JPG';
+import slider2 from '../assets/slider/slider2.JPG';
+import slider3 from '../assets/slider/slider3.jpg';
+import slider4 from '../assets/slider/slider4.jpg';
 
 const stories = [
   {
@@ -52,16 +56,20 @@ export default function Home() {
 
   const slides = [
     {
-      url: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1600&q=80",
-      alt: "Rehabilitation clinic and physical therapy support"
+      url: slider1,
+      alt: "Meththa Foundation Rehabilitation Center"
     },
     {
-      url: "https://images.unsplash.com/photo-1508847154043-be12a267ef68?auto=format&fit=crop&w=1600&q=80",
-      alt: "Providing wheels and orthotic materials"
+      url: slider2,
+      alt: "Prosthetic limb fitting and support"
     },
     {
-      url: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80",
-      alt: "Charity support and community health camps"
+      url: slider3,
+      alt: "Mobility assistance and wheelchairs"
+    },
+    {
+      url: slider4,
+      alt: "Community health and rehabilitation camps"
     }
   ];
 
@@ -286,7 +294,7 @@ export default function Home() {
       <section className="section" style={{ backgroundColor: 'var(--bg-card)' }}>
         <div className="container">
           <div className="text-center" style={{ marginBottom: 'var(--space-xl)' }}>
-            <span className="badge">What We Do</span>
+            {/* <span className="badge">What We Do</span> */}
             <h2 className="section-title center" style={{ marginTop: 'var(--space-xs)' }}>Our Mission & Purpose</h2>
             <p style={{ maxWidth: '600px', margin: 'var(--space-sm) auto 0 auto' }}>
               We are dedicated to supporting your journey towards complete physical, social, and emotional well-being.
@@ -333,7 +341,7 @@ export default function Home() {
           <div className="grid-2" style={{ alignItems: 'start', gap: 'var(--space-xl)' }}>
             {/* Left Column: Our Services */}
             <div>
-              <span className="badge">Expertise</span>
+              {/* <span className="badge">Expertise</span> */}
               <h2 className="section-title" style={{ marginTop: 'var(--space-xs)', marginBottom: 'var(--space-md)' }}>Our Services</h2>
               <p style={{ fontSize: '1.05rem', lineHeight: '1.7', marginBottom: 'var(--space-lg)' }}>
                 We specialise in physical rehabilitation of chronic incurable physical disabilities. There are four main areas where we undertake service provision but we have the capacity to provide support beyond these four. Our main areas of expertise are:
@@ -392,7 +400,7 @@ export default function Home() {
 
             {/* Right Column: Organization Info and Stats */}
             <div>
-              <span className="badge badge-amber">Our Reach</span>
+              {/* <span className="badge badge-amber">Our Reach</span> */}
               <h2 className="section-title" style={{ marginTop: 'var(--space-xs)', marginBottom: 'var(--space-md)' }}>We are a World Wide Charity Organization</h2>
               <p style={{ fontSize: '1.05rem', lineHeight: '1.7', marginBottom: 'var(--space-md)' }}>
                 We strived hard during the last 25 years to establish a premier open access Physical Rehabilitation service which is modern, cost effective and affordable. Every penny or rupee donated by benevolent donors and institutions is used entirely for service provision. We avoid waste by recycling anything that is recyclable.
@@ -463,7 +471,7 @@ export default function Home() {
           
           {/* Top Part: Why We Need Support */}
           <div style={{ marginBottom: 'var(--space-xl)', textAlign: 'center' }}>
-            <span className="badge badge-amber">Support Us</span>
+            {/* <span className="badge badge-amber">Support Us</span> */}
             <h2 className="section-title center" style={{ marginTop: 'var(--space-xs)', marginBottom: 'var(--space-sm)' }}>
               Why we need the support of donors like you...
             </h2>
@@ -683,7 +691,7 @@ export default function Home() {
       <section className="section" style={{ backgroundColor: 'var(--bg-card)', padding: 'var(--space-xl) 0', borderTop: '1px solid var(--border-light)' }}>
         <div className="container">
           <div className="text-center" style={{ marginBottom: 'var(--space-lg)' }}>
-            <span className="badge">Testimonials</span>
+            {/* <span className="badge">Testimonials</span> */}
             <h2 className="section-title center" style={{ marginTop: 'var(--space-xs)' }}>
               Read the Real Stories from the People We Helped
             </h2>

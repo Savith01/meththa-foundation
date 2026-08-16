@@ -31,10 +31,6 @@ export default function Footer() {
             <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: '1.6', marginBottom: 'var(--space-sm)' }}>
               Providing prosthetic limbs, custom orthoses, and rehabilitation to thousands of disabled individuals across Sri Lanka, restoring their independence and quality of life.
             </p>
-            <div style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.4)' }}>
-              <p>Registered UK Charity No. 1104860</p>
-              <p>Registered in Sri Lanka No. N(A)1117</p>
-            </div>
           </div>
 
           {/* Column 2: Contact Details */}
@@ -52,17 +48,17 @@ export default function Footer() {
               <div style={{ display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
                 <Phone size={18} style={{ color: 'var(--primary-light)', flexShrink: 0, marginTop: '2px' }} />
                 <div>
-                  <span style={{ display: 'block' }}>+94 37 227 5001 (Mobile)</span>
-                  <span style={{ display: 'block' }}>+94 37 227 5002 (Mobile)</span>
+                  <span style={{ display: 'block' }}>+94 37 361 8170 </span>
+                  <span style={{ display: 'block' }}>+94 37 227 5351 </span>
                 </div>
               </div>
               <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
                 <Phone size={18} style={{ color: '#25D366', flexShrink: 0 }} />
-                <span>+94 77 123 4567 (WhatsApp)</span>
+                <span>+94 76 777 2781 (WhatsApp)</span>
               </div>
               <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
                 <Mail size={18} style={{ color: 'var(--primary-light)', flexShrink: 0 }} />
-                <span>contact@meththafoundationsl.org</span>
+                <span>meththafoundationmaho@gmail.com</span>
               </div>
             </div>
           </div>
@@ -79,7 +75,7 @@ export default function Footer() {
               width: '100%'
             }}>
               <iframe
-                src="https://maps.google.com/maps?q=Meththa%20Rehabilitation%20Foundation,%20Moragollagama%20Road,%20Mahawa,%20Sri%20Lanka&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.674871862235!2d80.2783815747664!3d7.824195292196669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afccfde1650695b%3A0xe2f98e62f371c460!2sMeththa%20Rehabilitation%20Centre!5e0!3m2!1sen!2slk!4v1786773639188!5m2!1sen!2slk"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -101,7 +97,7 @@ export default function Footer() {
           flexWrap: 'wrap',
           gap: 'var(--space-sm)',
           fontSize: '0.8rem',
-          color: 'rgba(255, 255, 255, 0.40)'
+          color: 'rgba(156, 154, 154, 0.4)'
         }}>
           <p>© {currentYear} The Meththa Foundation. All Rights Reserved.</p>
           <div style={{ display: 'flex', gap: 'var(--space-md)' }}>
